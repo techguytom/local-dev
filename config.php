@@ -13,7 +13,8 @@
 
 
 /** directory name(s) */
-$dir = array("/Users/tjenkins/Sites/sites/*");
+$baseDir = getcwd();
+$dir = array($baseDir . "/../sites/*");
 					
 /** Your local top level domain */
 $tld = 'dev';
@@ -34,9 +35,9 @@ $icons = array( 'apple-touch-icon.png', 'favicon.ico' );
 *
 */
 $devtools = array(
-//	array( 'name' => 'Tool', 'url' => 'http://example.com/' ),
 	array( 'name' => 'Github Nerdery', 'url' => 'http://github.com/thenerdery' ),
 	array( 'name' => 'Github Personal', 'url' => 'http://github.com/techguytom' ),
+	array( 'name' => 'Git Reference', 'url' => 'http://gitref.org' ),
 	);
 
 /*
