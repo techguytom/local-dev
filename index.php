@@ -17,7 +17,7 @@
                 <nav>
                     <ul>
 <?php foreach ( $devtools as $tool ) {
-    printf( '<li><a href="%1$s">%2$s</a></li>', $tool['url'], $tool['name'] );
+    printf( '<li><a href="%1$s" target="_blank">%2$s</a></li>', $tool['url'], $tool['name'] );
 }
 ?>
                     </ul>
