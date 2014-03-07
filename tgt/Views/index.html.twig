@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width">
+    </body>
+    <div class="canvas">
+        <header>
+            <h1>{{ title }}</h1>
+            <nav>
+                <ul>
+                    {% for site in nav %}
+                        <li>
+                            <a href="{{ site['url'] }}">{{ site['name'] }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </header>
+        <content>
+            <ul class="sites">
+                {% for site in sites %}
+                    <li>
+                        {% if site['favicon'] is defined %}
+                            <img src="http://{{ site['siteName'] }}.dev/favicon.ico"/>
+                        {% endif %}
+                        <a 
+                            href="http://{{ site['siteName'] }}.dev">{{ site['siteName'] }} development</a>
+                        {% if site['prod'] is defined %}
+                            |&nbsp;
+                            {% if site['favicon'] is defined %}
+                                <img src="http://{{ site['siteName'] }}.dev/favicon.ico"/>
+                            {% endif %}
+                            <a href="http://{{ site['siteName'] }}.prod">{{ site['siteName'] }} production</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </content>
+    </body>
+</html>
