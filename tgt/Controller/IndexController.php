@@ -25,6 +25,10 @@ class IndexController
                     'name' => 'Git Reference',
                     'url'  => 'http://gitref.org',
                 ),
+                array(
+                    'name' => 'DB Search & Replace',
+                    'url'  => '/searchreplacedb2.php',
+                ),
             ),
             'phpVersion' => phpversion(),
         );
