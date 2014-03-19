@@ -1,0 +1,6 @@
+title: "TechGuyTom Development Sites"
+nav:
+    - {name: "Github Nerdery", url:"http://github.com/thenerdery"}
+    - {name: "Github Personal", url:"http://github.com/techguytom"}
+    - {name: "Git Reference", url:"http://gitref.org"}
+    - {name: "DB Search & Replace", url:"/searchreplacedb2.php"}

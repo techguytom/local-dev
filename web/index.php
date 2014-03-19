@@ -18,6 +18,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(),
         'twig.path' => __DIR__ . '/../tgt/Views',
     )
 );
+$app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__ . "/../config/parameters.yml"));
 
 // Controllers
 $app['index.controller'] = $app->share(function() {
@@ -26,6 +27,5 @@ $app['index.controller'] = $app->share(function() {
 
 // Routes
 $app->get('/', 'index.controller:indexAction');
-
 
 $app->run();
