@@ -14,7 +14,7 @@
                 <ul>
                     {% for site in nav %}
                         <li>
-                            <a href="{{ site['url'] }}">{{ site['name'] }}</a>
+                            <a href="{{ site['url'] }}" target="_blank">{{ site['name'] }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -25,14 +25,14 @@
                 {% for site in sites %}
                     <li>
                         {% if site['favicon'] is defined %}
-                            <img src="http://{{ site['siteName'] }}.dev/favicon.ico"/>
+                            <img src="{{ site['favicon'] }}"/>
                         {% endif %}
                         <a 
                             href="http://{{ site['siteName'] }}.dev">{{ site['siteName'] }} development</a>
                         {% if site['prod'] is defined %}
-                            |&nbsp;
+                            &nbsp;|&nbsp;
                             {% if site['favicon'] is defined %}
-                                <img src="http://{{ site['siteName'] }}.dev/favicon.ico"/>
+                                <img src="{{ site['favicon'] }}"/>
                             {% endif %}
                             <a href="http://{{ site['siteName'] }}.prod">{{ site['siteName'] }} production</a>
                         {% endif %}

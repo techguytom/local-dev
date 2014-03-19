@@ -11,25 +11,8 @@ class IndexController
     {
         $count    = 0;
         $viewData = array(
-            'title' => 'TechGuyTom Development Sites',
-            'nav'   => array(
-                array(
-                    'name' => 'Github Nerdery',
-                    'url'  => 'http://github.com/thenerdery',
-                ),
-                array(
-                    'name' => 'Github Personal',
-                    'url'  => 'http://github.com/techguytom',
-                ),
-                array(
-                    'name' => 'Git Reference',
-                    'url'  => 'http://gitref.org',
-                ),
-                array(
-                    'name' => 'DB Search & Replace',
-                    'url'  => '/searchreplacedb2.php',
-                ),
-            ),
+            'title' => $app['title'],
+            'nav'   => $app['nav'],
             'phpVersion' => phpversion(),
         );
 
@@ -39,8 +22,10 @@ class IndexController
                 $viewData['sites'][$count]['prod'] = true;
             }
             
-            if (file_exists($file . '/web/favicon.ico')) {
-                $viewData['sites'][$count]['favicon'] = true;
+            if (is_dir($file . '/web/wp-content')) {
+                $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
+            } else {
+                $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
             }
 
             $count++;
