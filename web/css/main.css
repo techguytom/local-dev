@@ -5,7 +5,7 @@
     width: 960px;
 }
 header {
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid #101010;
     margin-bottom: 30px;
     padding-bottom: 20px;
 }
@@ -16,7 +16,7 @@ ul {
 }
 li {
     display: inline-block;
-    background-color: #e3e3e3;
+    background-color: #101010;
     padding: 10px;
     margin-right: 15px;
     border-radius: 5px;
@@ -24,8 +24,13 @@ li {
 content li {
     width: 45%;
     margin-bottom: 25px;
+    color: #ffffff;
 }
 li img {
     height: 18px;
     vertical-align: bottom;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
