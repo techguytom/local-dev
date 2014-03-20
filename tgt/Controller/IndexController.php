@@ -22,7 +22,7 @@ class IndexController
                 $viewData['sites'][$count]['prod'] = true;
             }
             
-            if (is_dir($file . '/web/wp-content')) {
+            if (is_dir($file . '/web/wp-content') || is_dir($file . '/web/content')) {
                 $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
             } else {
                 $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
