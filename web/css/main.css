@@ -1,7 +1,11 @@
+body {
+    background-color: #999999;
+}
 .canvas {
     color: #1E5799;
-    font-family: Arial;
+    font-family: Helvetica;
     font-size: 18px;
+    font-weight: 200;
     margin: 0 auto;
     width: 960px;
 }
