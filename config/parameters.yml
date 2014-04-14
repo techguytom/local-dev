@@ -4,3 +4,4 @@ nav:
     - {name: "Github Personal", url:"http://github.com/techguytom"}
     - {name: "Git Reference", url:"http://gitref.org"}
     - {name: "DB Search & Replace", url:"/searchreplacedb2.php"}
+    - {name: "PHP Info", url:"/info.php"}
