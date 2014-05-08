@@ -21,19 +21,28 @@
         <content>
             <ul class="sites">
                 {% for site in sites %}
-                    <li><a href="http://{{ site['siteName'] }}.dev" target="_blank">
-                        {% if site['favicon'] is defined %}
-                            <img src="{{ site['favicon'] }}"/>
-                        {% endif %}
-                        {{ site['siteName'] }} development</a>
-                        {% if site['prod'] is defined %}
-                            &nbsp;|&nbsp;<a href="http://{{ site['siteName'] }}.prod" target="_blank">
+                    {% if site['rails'] is defined %}
+                        <li><a href="http://localhost:3000" target="_blank">
                             {% if site['favicon'] is defined %}
                                 <img src="{{ site['favicon'] }}"/>
                             {% endif %}
-                            {{ site['siteName'] }} production</a>
-                        {% endif %}
-                    </li>
+                            {{ site['siteName'] }} development</a>
+                        </li>
+                    {% else %}
+                        <li><a href="http://{{ site['siteName'] }}.dev" target="_blank">
+                            {% if site['favicon'] is defined %}
+                                <img src="{{ site['favicon'] }}"/>
+                            {% endif %}
+                            {{ site['siteName'] }} development</a>
+                            {% if site['prod'] is defined %}
+                                &nbsp;|&nbsp;<a href="http://{{ site['siteName'] }}.prod" target="_blank">
+                                {% if site['favicon'] is defined %}
+                                    <img src="{{ site['favicon'] }}"/>
+                                {% endif %}
+                                {{ site['siteName'] }} production</a>
+                            {% endif %}
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </content>

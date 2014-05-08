@@ -1,5 +1,7 @@
 ### A Local Home Page for OSX Web Development
 
+Current Version 0.3
+
 This is the home page for my personal development environment. It was
 originally based off of work found within this [blog post](http://mallinson.ca/post/osx-web-development).
 

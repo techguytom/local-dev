@@ -28,6 +28,10 @@ class IndexController
                 $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
             }
 
+            if (is_file($file . '/Gemfile')) {
+                $viewData['sites'][$count]['rails'] = true;
+            }
+
             $count++;
         }
 
