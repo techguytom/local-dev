@@ -10,8 +10,8 @@ class IndexController
     {
         $count    = 0;
         $viewData = array(
-            'title' => $app['title'],
-            'nav'   => $app['nav'],
+            'title'      => $app['title'],
+            'nav'        => $app['nav'],
             'phpVersion' => phpversion(),
         );
 
@@ -20,17 +20,19 @@ class IndexController
             if (is_dir($file . '/build/output')) {
                 $viewData['sites'][$count]['prod'] = true;
             }
-            
-            if (is_dir($file . '/web/wp-content') || is_dir($file . '/web/content')) {
-                $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
-            } else {
-                $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
-            }
 
             if (is_dir($file . '/app')) {
                 $viewData['sites'][$count]['symfony'] = '/app_dev.php';
             } else {
                 $viewData['sites'][$count]['symfony'] = '';
+            }
+
+            if (is_dir($file . '/web/wp-content') || is_dir($file . '/web/content')) {
+                $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
+            } elseif (is_file($file . '/web/favicon.ico')) {
+                $viewData['sites'][$count]['favicon'] = 'http://' . basename($file) . '.dev/favicon.ico';
+            } else {
+                $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
             }
 
             if (is_file($file . '/Gemfile')) {
