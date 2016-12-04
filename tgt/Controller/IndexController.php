@@ -3,7 +3,6 @@
 namespace Controller;
 
 use Silex\Application;
-use Symfony\Component\HttpFoundation\Response;
 
 class IndexController
 {
@@ -26,6 +25,12 @@ class IndexController
                 $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
             } else {
                 $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
+            }
+
+            if (is_dir($file . '/app')) {
+                $viewData['sites'][$count]['symfony'] = '/app_dev.php';
+            } else {
+                $viewData['sites'][$count]['symfony'] = '';
             }
 
             if (is_file($file . '/Gemfile')) {
