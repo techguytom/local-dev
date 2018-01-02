@@ -30,7 +30,7 @@ class IndexController
             if (is_dir($file . '/web/wp-content') || is_dir($file . '/web/content')) {
                 $viewData['sites'][$count]['favicon'] = '/img/icon-wp.png';
             } elseif (is_file($file . '/web/favicon.ico')) {
-                $viewData['sites'][$count]['favicon'] = 'http://' . basename($file) . '.dev/favicon.ico';
+                $viewData['sites'][$count]['favicon'] = 'http://' . basename($file) . '.local/favicon.ico';
             } else {
                 $viewData['sites'][$count]['favicon'] = '/img/icon-gear.png';
             }
