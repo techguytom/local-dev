@@ -3,6 +3,6 @@ nav:
     - {name: "BitBucket Nerdery", url:"http://git.nerderylabs.com"}
     - {name: "Github", url:"http://github.com/techguytom"}
     - {name: "Git Reference", url:"http://gitref.org"}
-    - {name: "DB Search & Replace", url:"/searchreplacedb2.php"}
+    - {name: "DB Search & Replace", url:"/Search-Replace-DB-master/index.php"}
     - {name: "PHP Info", url:"/info.php"}
     - {name: "MailCatcher", url:"http://127.0.0.1:1080"}
